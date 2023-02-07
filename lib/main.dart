@@ -28,6 +28,20 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              const SizedBox(height: 20),
+              const Image(
+                image: AssetImage('image/arch.png'),
+                width: 200,
+              ),
+              ElevatedButton(
+                child: Text(
+                  'Wejdź',
+                  style: GoogleFonts.raleway(
+                    fontSize: 20,
+                  ),
+                ),
+                onPressed: () {},
+              ),
             ],
           ),
         ),
