@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "514162489278",
+    "project_id": "sladami-zabytkow",
+    "storage_bucket": "sladami-zabytkow.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514162489278:android:fe52577a4c060dc64a6bef",
+        "android_client_info": {
+          "package_name": "com.sandramachnikowska.sladami_zabytkow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514162489278-vn05hpt24lk5vg3gnh7f9sv03oag7bht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGn-HxP09qzAHX-bL-Jx3GVltOJnWkLnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514162489278-vn05hpt24lk5vg3gnh7f9sv03oag7bht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
