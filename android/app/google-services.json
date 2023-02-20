@@ -29,6 +29,13 @@
             {
               "client_id": "514162489278-vn05hpt24lk5vg3gnh7f9sv03oag7bht.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "514162489278-prvb042q99lrpipe6qpleu985rgjub5u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sandramachnikowska.sladamiZabytkow"
+              }
             }
           ]
         }

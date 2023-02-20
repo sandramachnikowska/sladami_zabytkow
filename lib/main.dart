@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -89,57 +90,64 @@ class FirstPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
-      appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
-        title: Text(
-          'ŚLADAMI ZABYTKÓW',
-          style: GoogleFonts.grenze(
-            letterSpacing: 2,
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'DRUGA STRONA',
-              style: GoogleFonts.glory(
-                fontSize: 48,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 5,
+    return const LoginPage();
+  }
+}
+
+class LoginPage extends StatelessWidget {
+  const LoginPage({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<User?>(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, snapshot) {
+          final user = snapshot.data;
+          if (user == null) {
+            return const Scaffold(
+              body: Center(
+                child: Text('Jesteś niezalogowany'),
               ),
-            ),
-            const SizedBox(height: 20),
-            const Image(
-              image: AssetImage('image/arch.png'),
-              width: 400,
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
-                side: const BorderSide(
-                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
-                elevation: 20,
-              ),
-              child: Text(
-                'Wejdź',
-                style: GoogleFonts.raleway(
+            );
+          }
+          return Scaffold(
+            backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
+            appBar: AppBar(
+              backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
+              title: Text(
+                'ŚLADAMI ZABYTKÓW',
+                style: GoogleFonts.grenze(
+                  letterSpacing: 2,
                   fontSize: 30,
+                  fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
             ),
-          ],
-        ),
-      ),
-    );
+            body: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'jesteś zalogowany jako ${user.email}',
+                    style: GoogleFonts.glory(
+                      fontSize: 48,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 5,
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  const Image(
+                    image: AssetImage('image/arch.png'),
+                    width: 400,
+                  ),
+                  const SizedBox(height: 20),
+                ],
+              ),
+            ),
+          );
+        });
   }
 }
