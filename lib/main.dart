@@ -106,48 +106,66 @@ class LoginPage extends StatelessWidget {
         builder: (context, snapshot) {
           final user = snapshot.data;
           if (user == null) {
-            return const Scaffold(
-              body: Center(
-                child: Text('Jesteś niezalogowany'),
-              ),
-            );
+            return const RegisterPage();
           }
-          return Scaffold(
-            backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
-            appBar: AppBar(
-              backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
-              title: Text(
-                'ŚLADAMI ZABYTKÓW',
-                style: GoogleFonts.grenze(
-                  letterSpacing: 2,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              ),
-            ),
-            body: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'jesteś zalogowany jako ${user.email}',
-                    style: GoogleFonts.glory(
-                      fontSize: 48,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 5,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  const Image(
-                    image: AssetImage('image/arch.png'),
-                    width: 400,
-                  ),
-                  const SizedBox(height: 20),
-                ],
-              ),
-            ),
-          );
+          return HomePage(user: user);
         });
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({
+    super.key,
+    required this.user,
+  });
+
+  final User user;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
+      appBar: AppBar(
+        backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
+        title: Text(
+          'ŚLADAMI ZABYTKÓW',
+          style: GoogleFonts.grenze(
+            letterSpacing: 2,
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('jesteś zalogowany jako ${user.email}'),
+            const SizedBox(height: 20),
+            const Image(
+              image: AssetImage('image/arch.png'),
+              width: 400,
+            ),
+            const SizedBox(height: 20),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Text('Jesteś niezalogowany'),
+      ),
+    );
   }
 }
