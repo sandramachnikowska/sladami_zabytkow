@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'app/home/home_page.dart';
+import 'app/login/login_page2.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -71,7 +73,7 @@ class WelcomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const FirstPage(),
+                    builder: (_) => const LoginPage(),
                   ),
                 );
               },
@@ -83,19 +85,19 @@ class WelcomePage extends StatelessWidget {
   }
 }
 
-class FirstPage extends StatelessWidget {
-  const FirstPage({
+class LoginPage extends StatelessWidget {
+  const LoginPage({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return const LoginPage();
+    return const RootPage();
   }
 }
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({
+class RootPage extends StatelessWidget {
+  const RootPage({
     super.key,
   });
 
@@ -106,66 +108,11 @@ class LoginPage extends StatelessWidget {
         builder: (context, snapshot) {
           final user = snapshot.data;
           if (user == null) {
-            return const RegisterPage();
+            return const LoginPage2();
           }
           return HomePage(user: user);
         });
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({
-    super.key,
-    required this.user,
-  });
 
-  final User user;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
-      appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
-        title: Text(
-          'ŚLADAMI ZABYTKÓW',
-          style: GoogleFonts.grenze(
-            letterSpacing: 2,
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('jesteś zalogowany jako ${user.email}'),
-            const SizedBox(height: 20),
-            const Image(
-              image: AssetImage('image/arch.png'),
-              width: 400,
-            ),
-            const SizedBox(height: 20),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class RegisterPage extends StatelessWidget {
-  const RegisterPage({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Jesteś niezalogowany'),
-      ),
-    );
-  }
-}

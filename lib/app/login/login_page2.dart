@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RegisterPage extends StatelessWidget {
-  const RegisterPage({
+class LoginPage2 extends StatelessWidget {
+  const LoginPage2({
     super.key,
   });
 
@@ -9,7 +9,9 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('Jesteś niezalogowany'),
+        child: Text(
+          'Jesteś niezalogowany',
+        ),
       ),
     );
   }

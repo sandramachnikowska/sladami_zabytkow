@@ -14,29 +14,31 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
-      appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
-        title: Text(
-          'ŚLADAMI ZABYTKÓW',
-          style: GoogleFonts.grenze(
-            letterSpacing: 2,
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('jesteś zalogowany jako ${user.email}'),
-            const SizedBox(height: 20),
-            const Image(
-              image: AssetImage('image/arch.png'),
-              width: 400,
+            Text(
+              'zalogowany jako ${user.email}',
             ),
-            const SizedBox(height: 20),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Wracaj',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
           ],
         ),
       ),
