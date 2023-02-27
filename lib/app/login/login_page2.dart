@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
+
 import 'package:flutter/material.dart';
 
-class LoginPage2 extends StatelessWidget {
+class LoginPage2 extends StatefulWidget {
   LoginPage2({
     Key? key,
   }) : super(key: key);
@@ -10,6 +10,12 @@ class LoginPage2 extends StatelessWidget {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
+  @override
+  State<LoginPage2> createState() => _LoginPage2State();
+}
+
+class _LoginPage2State extends State<LoginPage2> {
+  var errorMessage = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,28 +28,32 @@ class LoginPage2 extends StatelessWidget {
               const Text('Zaloguj się'),
               const SizedBox(height: 20),
               TextField(
-                controller: emailController,
+                controller: widget.emailController,
                 decoration: const InputDecoration(hintText: 'E-mail'),
               ),
               TextField(
-                controller: passwordController,
+                controller: widget.passwordController,
                 decoration: const InputDecoration(hintText: 'Hasło'),
                 obscureText: true,
               ),
+              const SizedBox(height: 20),
+              Text(errorMessage),
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () async {
                   try {
                     await FirebaseAuth.instance.signInWithEmailAndPassword(
-                      email: emailController.text,
-                      password: passwordController.text,
+                      email: widget.emailController.text,
+                      password: widget.passwordController.text,
                     );
                   } catch (error) {
-                    print(error);
+                    setState(() {
+                      errorMessage = error.toString();
+                    });
                   }
                   await FirebaseAuth.instance.signInWithEmailAndPassword(
-                    email: emailController.text,
-                    password: passwordController.text,
+                    email: widget.emailController.text,
+                    password: widget.passwordController.text,
                   );
                 },
                 child: const Text('Zaloguj się'),
