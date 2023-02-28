@@ -29,14 +29,14 @@ class HomePage extends StatelessWidget {
                 elevation: 20,
               ),
               child: Text(
-                'Wracaj',
+                'Wyloguj',
                 style: GoogleFonts.raleway(
                   fontSize: 30,
                   color: Colors.black,
                 ),
               ),
               onPressed: () {
-                Navigator.of(context).pop();
+                FirebaseAuth.instance.signOut();
               },
             ),
           ],
