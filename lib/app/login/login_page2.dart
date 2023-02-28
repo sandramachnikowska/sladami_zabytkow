@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage2 extends StatefulWidget {
   LoginPage2({
@@ -21,15 +22,31 @@ class _LoginPage2State extends State<LoginPage2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 168, 161, 161),
+        title: Text(
+          'ŚLADAMI ZABYTKÓW',
+          style: GoogleFonts.rubik(
+            fontSize: 28,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(isCreatingAccount == true
-                  ? 'Zarejestruj się'
-                  : 'Zaloguj się'),
+              Text(
+                isCreatingAccount == true ? 'Zarejestruj się' : 'Zaloguj się',
+                style: GoogleFonts.inter(
+                  fontSize: 27,
+                  color: Colors.black,
+                ),
+              ),
               const SizedBox(height: 20),
               TextField(
                 controller: widget.emailController,
@@ -44,6 +61,12 @@ class _LoginPage2State extends State<LoginPage2> {
               Text(errorMessage),
               const SizedBox(height: 20),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                  side: const BorderSide(
+                      width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                  elevation: 20,
+                ),
                 onPressed: () async {
                   if (isCreatingAccount == true) {
                     //rejestracja
@@ -77,9 +100,13 @@ class _LoginPage2State extends State<LoginPage2> {
                     password: widget.passwordController.text,
                   );
                 },
-                child: Text(isCreatingAccount == true
-                    ? 'Zarejestruj się'
-                    : 'Zaloguj się'),
+                child: Text(
+                  isCreatingAccount == true ? 'Zarejestruj się' : 'Zaloguj się',
+                  style: GoogleFonts.raleway(
+                    fontSize: 22,
+                    color: Colors.black,
+                  ),
+                ),
               ),
               const SizedBox(height: 20),
               if (isCreatingAccount == false) ...[
@@ -89,7 +116,13 @@ class _LoginPage2State extends State<LoginPage2> {
                       isCreatingAccount = true;
                     });
                   },
-                  child: const Text('Utwórz konto'),
+                  child: Text(
+                    'Utwórz konto',
+                    style: GoogleFonts.inter(
+                      fontSize: 15,
+                      color: Colors.black,
+                    ),
+                  ),
                 ),
               ],
               if (isCreatingAccount == true) ...[
@@ -99,7 +132,13 @@ class _LoginPage2State extends State<LoginPage2> {
                       isCreatingAccount = false;
                     });
                   },
-                  child: const Text('Masz już konto?'),
+                  child: Text(
+                    'Masz już konto?',
+                    style: GoogleFonts.inter(
+                      fontSize: 15,
+                      color: Colors.black,
+                    ),
+                  ),
                 ),
               ],
             ],
