@@ -44,7 +44,13 @@ class HomePage extends StatelessWidget {
                     width: 2, color: Color.fromARGB(255, 42, 41, 41)),
                 elevation: 20,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const ProvincesPage(),
+                  ),
+                );
+              },
               child: Text(
                 'Polska',
                 style: GoogleFonts.grandstander(
@@ -61,7 +67,13 @@ class HomePage extends StatelessWidget {
                     width: 2, color: Color.fromARGB(255, 42, 41, 41)),
                 elevation: 20,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const ContinentsPage(),
+                  ),
+                );
+              },
               child: Text(
                 'Świat',
                 style: GoogleFonts.grandstander(
@@ -88,6 +100,58 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 FirebaseAuth.instance.signOut();
               },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ProvincesPage extends StatelessWidget {
+  const ProvincesPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Polska',
+              style: GoogleFonts.glory(
+                fontSize: 48,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 5,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ContinentsPage extends StatelessWidget {
+  const ContinentsPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromRGBO(224, 212, 212, 1),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Świat',
+              style: GoogleFonts.glory(
+                fontSize: 48,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 5,
+              ),
             ),
           ],
         ),
