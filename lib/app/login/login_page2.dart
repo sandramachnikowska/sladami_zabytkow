@@ -88,17 +88,13 @@ class _LoginPage2State extends State<LoginPage2> {
                         email: widget.emailController.text,
                         password: widget.passwordController.text,
                       );
+                      
                     } catch (error) {
                       setState(() {
                         errorMessage = error.toString();
                       });
                     }
                   }
-
-                  await FirebaseAuth.instance.signInWithEmailAndPassword(
-                    email: widget.emailController.text,
-                    password: widget.passwordController.text,
-                  );
                 },
                 child: Text(
                   isCreatingAccount == true ? 'Zarejestruj się' : 'Zaloguj się',
