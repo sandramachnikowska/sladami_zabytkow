@@ -15,22 +15,365 @@ class ProvincesPage extends StatelessWidget {
           style: GoogleFonts.rubik(
             fontSize: 28,
             fontWeight: FontWeight.bold,
-            letterSpacing: 10,
+            letterSpacing: 15,
             color: Colors.black,
           ),
         ),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
           children: [
-            Text(
-              'Polska',
-              style: GoogleFonts.glory(
-                fontSize: 48,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 5,
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
               ),
+              child: Text(
+                'Dolnoślaskie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              //  Navigator.of(context).push(
+//MaterialPageRoute(
+              //   builder: (_) =>
+              //  ),
+              // );
+              //},
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Kujawsko-Pomorskie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              //   Navigator.of(context).push(
+              //  MaterialPageRoute(
+              //   builder: (_) => const RootPage(),
+              //  ),
+              // );
+              // },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Lubelskie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              //Navigator.of(context).push(
+              //MaterialPageRoute(
+              //builder: (_) => const RootPage(),
+              // ),
+              //  );
+              //},
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Lubuskie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              //Navigator.of(context).push(
+              // MaterialPageRoute(
+              //   builder: (_) => const RootPage(),
+              // ),
+              //  );
+              // },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Łódzkie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              //Navigator.of(context).push(
+              // MaterialPageRoute(
+              // builder: (_) => const RootPage(),
+              // ),
+              // );
+              // },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Małopolskie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              //Navigator.of(context).push(
+              //MaterialPageRoute(
+              //  builder: (_) => const RootPage(),
+              // ),
+              //  );
+              // },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Mazowieckie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              // Navigator.of(context).push(
+              //  MaterialPageRoute(
+              //   builder: (_) => const RootPage(),
+              // ),
+              //);
+              // },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Opolskie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              //Navigator.of(context).push(
+              // MaterialPageRoute(
+              //   builder: (_) => const RootPage(),
+              //  ),
+              //  );
+              //   },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Podkarpackie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              // Navigator.of(context).push(
+              //MaterialPageRoute(
+              //  builder: (_) => const RootPage(),
+              // ),
+              // );
+              //  },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Podlaskie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              //Navigator.of(context).push(
+              //MaterialPageRoute(
+              //  builder: (_) => const RootPage(),
+              //  ),
+              //  );
+              // },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Pomorskie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              // Navigator.of(context).push(
+              // MaterialPageRoute(
+              // builder: (_) => const RootPage(),
+              // ),
+              //  );
+              //  },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Śląskie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              // Navigator.of(context).push(
+              //  MaterialPageRoute(
+              //   builder: (_) => const RootPage(),
+              //  ),
+              // );
+              //  },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Świętokrzyskie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              // Navigator.of(context).push(
+              //  MaterialPageRoute(
+              //    builder: (_) => const RootPage(),
+              //  ),
+              //  );
+              //  },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Warmińsko-Mazurskie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              // Navigator.of(context).push(
+              //MaterialPageRoute(
+              // builder: (_) => const RootPage(),
+              // ),
+              //);
+              //  },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Wielkopolskie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              //Navigator.of(context).push(
+              //MaterialPageRoute(
+              //  builder: (_) => const RootPage(),
+              // ),
+              // );
+              // },
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(203, 202, 202, 1),
+                side: const BorderSide(
+                    width: 2, color: Color.fromARGB(255, 42, 41, 41)),
+                elevation: 20,
+              ),
+              child: Text(
+                'Zachodniopomorskie',
+                style: GoogleFonts.raleway(
+                  fontSize: 30,
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
+              //Navigator.of(context).push(
+              // MaterialPageRoute(
+              //   builder: (_) => const RootPage(),
+              //   ),
+              //  );
+              //  },
             ),
           ],
         ),
