@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ContinentsPage extends StatelessWidget {
-  const ContinentsPage({super.key});
+  ContinentsPage({super.key});
+
+  final controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

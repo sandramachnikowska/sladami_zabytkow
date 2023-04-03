@@ -73,7 +73,7 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const ContinentsPage(),
+                    builder: (_) => ContinentsPage(),
                   ),
                 );
               },
