@@ -3,14 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 final controller = TextEditingController();
 
-
-
-
-
-  @override
-  Widget build(BuildContext context) {
-    return const AfricaPage();
-  }
+@override
+Widget build(BuildContext context) {
+  return const AfricaPage();
+}
 
 class AfricaPage extends StatelessWidget {
   const AfricaPage({
@@ -28,7 +24,6 @@ class AfricaPage extends StatelessWidget {
           style: GoogleFonts.rubik(
             fontSize: 28,
             fontWeight: FontWeight.bold,
-            letterSpacing: 10,
             color: Colors.black,
           ),
         ),
@@ -36,4 +31,3 @@ class AfricaPage extends StatelessWidget {
     );
   }
 }
-

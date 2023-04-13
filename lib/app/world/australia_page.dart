@@ -19,7 +19,6 @@ class AustraliaPage extends StatelessWidget {
           style: GoogleFonts.rubik(
             fontSize: 28,
             fontWeight: FontWeight.bold,
-            letterSpacing: 10,
             color: Colors.black,
           ),
         ),

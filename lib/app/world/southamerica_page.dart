@@ -5,7 +5,7 @@ final controller = TextEditingController();
 
 @override
 Widget build(BuildContext context) {
-  return SouthAmericaPage();
+  return const SouthAmericaPage();
 }
 
 class SouthAmericaPage extends StatelessWidget {
@@ -24,7 +24,6 @@ class SouthAmericaPage extends StatelessWidget {
           style: GoogleFonts.rubik(
             fontSize: 28,
             fontWeight: FontWeight.bold,
-            letterSpacing: 10,
             color: Colors.black,
           ),
         ),
