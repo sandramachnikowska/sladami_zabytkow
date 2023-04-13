@@ -3,8 +3,13 @@ import 'package:google_fonts/google_fonts.dart';
 
 final controller = TextEditingController();
 
-class NorthAmericaPage extends StatelessWidget {
-  const NorthAmericaPage({
+@override
+Widget build(BuildContext context) {
+  return SouthAmericaPage();
+}
+
+class SouthAmericaPage extends StatelessWidget {
+  const SouthAmericaPage({
     super.key,
   });
 
@@ -15,7 +20,7 @@ class NorthAmericaPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 168, 161, 161),
         title: Text(
-          'Ameryka Północna',
+          'Ameryka Południowa',
           style: GoogleFonts.rubik(
             fontSize: 28,
             fontWeight: FontWeight.bold,

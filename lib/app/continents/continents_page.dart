@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sladami_zabytkow/app/world/africa_page.dart';
+import 'package:sladami_zabytkow/app/world/antarctica_page.dart';
+import 'package:sladami_zabytkow/app/world/asia_page.dart';
+import 'package:sladami_zabytkow/app/world/australia_page.dart';
+import 'package:sladami_zabytkow/app/world/europe_page.dart';
+import 'package:sladami_zabytkow/app/world/northamerica_page.dart';
+import 'package:sladami_zabytkow/app/world/southamerica_page.dart';
 
 class ContinentsPage extends StatelessWidget {
   ContinentsPage({super.key});
@@ -38,13 +45,13 @@ class ContinentsPage extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            onPressed: () {},
-            //  Navigator.of(context).push(
-//MaterialPageRoute(
-            //   builder: (_) =>
-            //  ),
-            // );
-            //},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const AfricaPage(),
+                ),
+              );
+            },
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -60,13 +67,13 @@ class ContinentsPage extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            onPressed: () {},
-            //  Navigator.of(context).push(
-//MaterialPageRoute(
-            //   builder: (_) =>
-            //  ),
-            // );
-            //},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const SouthAmericaPage(),
+                ),
+              );
+            },
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -82,13 +89,13 @@ class ContinentsPage extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            onPressed: () {},
-            //  Navigator.of(context).push(
-//MaterialPageRoute(
-            //   builder: (_) =>
-            //  ),
-            // );
-            //},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const NorthAmericaPage(),
+                ),
+              );
+            },
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -104,13 +111,13 @@ class ContinentsPage extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            onPressed: () {},
-            //  Navigator.of(context).push(
-//MaterialPageRoute(
-            //   builder: (_) =>
-            //  ),
-            // );
-            //},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const AntarticaPage(),
+                ),
+              );
+            },
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -126,13 +133,13 @@ class ContinentsPage extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            onPressed: () {},
-            //  Navigator.of(context).push(
-//MaterialPageRoute(
-            //   builder: (_) =>
-            //  ),
-            // );
-            //},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const AustraliaPage(),
+                ),
+              );
+            },
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -148,13 +155,13 @@ class ContinentsPage extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            onPressed: () {},
-            //  Navigator.of(context).push(
-//MaterialPageRoute(
-            //   builder: (_) =>
-            //  ),
-            // );
-            //},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const AsiaPage(),
+                ),
+              );
+            },
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -170,13 +177,13 @@ class ContinentsPage extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            onPressed: () {},
-            //  Navigator.of(context).push(
-//MaterialPageRoute(
-            //   builder: (_) =>
-            //  ),
-            // );
-            //},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const EuropePage(),
+                ),
+              );
+            },
           ),
         ],
       ),
