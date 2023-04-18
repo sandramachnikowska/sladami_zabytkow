@@ -383,14 +383,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-          onPressed: () {
+              onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (_) => const ZachodniopomorskiePage(),
                   ),
                 );
               },
-            ),
             ),
           ],
         ),
