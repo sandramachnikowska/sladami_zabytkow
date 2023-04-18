@@ -32,6 +32,16 @@ class AfricaPage extends StatelessWidget {
         onPressed: () {},
         child: const Icon(Icons.add),
       ),
+      body: ListView(
+        children: [
+          Container(
+            color: Colors.amber,
+            padding: const EdgeInsets.all(20),
+            margin: const EdgeInsets.all(10),
+            child: const Text('Jakiś tekst'),
+          ),
+        ],
+      ),
     );
   }
 }
