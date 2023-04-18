@@ -3,12 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 final controller = TextEditingController();
 
-
-
-  @override
-  Widget build(BuildContext context) {
-    return const PomorskiePage();
-  }
+@override
+Widget build(BuildContext context) {
+  return const PomorskiePage();
+}
 
 class PomorskiePage extends StatelessWidget {
   const PomorskiePage({
@@ -29,6 +27,10 @@ class PomorskiePage extends StatelessWidget {
             color: Colors.black,
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add),
       ),
     );
   }
