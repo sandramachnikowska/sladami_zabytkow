@@ -1,5 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sladami_zabytkow/app/poland/dolnoslaskie_page.dart';
+import 'package:sladami_zabytkow/app/poland/kujawskopomorskie_page.dart';
+import 'package:sladami_zabytkow/app/poland/lodzkie_page.dart';
+import 'package:sladami_zabytkow/app/poland/lubelskie_page.dart';
+import 'package:sladami_zabytkow/app/poland/lubuskie_page.dart';
+import 'package:sladami_zabytkow/app/poland/malopolskie_page.dart';
+import 'package:sladami_zabytkow/app/poland/mazowieckie_page.dart';
+import 'package:sladami_zabytkow/app/poland/opolskie_page.dart';
+import 'package:sladami_zabytkow/app/poland/podkarpackie_page.dart';
+import 'package:sladami_zabytkow/app/poland/podlaskie_page.dart';
+import 'package:sladami_zabytkow/app/poland/pomorskie_page.dart';
+import 'package:sladami_zabytkow/app/poland/slaskie_page.dart';
+import 'package:sladami_zabytkow/app/poland/swietokrzyskie_page.dart';
+import 'package:sladami_zabytkow/app/poland/warminskomazurskie_page.dart';
+import 'package:sladami_zabytkow/app/poland/wielkopolskie_page.dart';
+import 'package:sladami_zabytkow/app/poland/zachodniopomorskie_page.dart';
 
 class ProvincesPage extends StatelessWidget {
   const ProvincesPage({super.key});
@@ -37,13 +53,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              //  Navigator.of(context).push(
-//MaterialPageRoute(
-              //   builder: (_) =>
-              //  ),
-              // );
-              //},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const DolnoslaskiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -59,13 +75,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              //   Navigator.of(context).push(
-              //  MaterialPageRoute(
-              //   builder: (_) => const RootPage(),
-              //  ),
-              // );
-              // },
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const KujawskoPomorskiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -81,13 +97,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              //Navigator.of(context).push(
-              //MaterialPageRoute(
-              //builder: (_) => const RootPage(),
-              // ),
-              //  );
-              //},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const LubelskiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -103,13 +119,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              //Navigator.of(context).push(
-              // MaterialPageRoute(
-              //   builder: (_) => const RootPage(),
-              // ),
-              //  );
-              // },
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const LubuskiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -125,13 +141,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              //Navigator.of(context).push(
-              // MaterialPageRoute(
-              // builder: (_) => const RootPage(),
-              // ),
-              // );
-              // },
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const LodzkiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -147,13 +163,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              //Navigator.of(context).push(
-              //MaterialPageRoute(
-              //  builder: (_) => const RootPage(),
-              // ),
-              //  );
-              // },
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const MalopolskiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -169,13 +185,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              // Navigator.of(context).push(
-              //  MaterialPageRoute(
-              //   builder: (_) => const RootPage(),
-              // ),
-              //);
-              // },
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const MazowieckiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -191,13 +207,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              //Navigator.of(context).push(
-              // MaterialPageRoute(
-              //   builder: (_) => const RootPage(),
-              //  ),
-              //  );
-              //   },
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const OpolskiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -213,13 +229,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              // Navigator.of(context).push(
-              //MaterialPageRoute(
-              //  builder: (_) => const RootPage(),
-              // ),
-              // );
-              //  },
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const PodkarpackiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -235,13 +251,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              //Navigator.of(context).push(
-              //MaterialPageRoute(
-              //  builder: (_) => const RootPage(),
-              //  ),
-              //  );
-              // },
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const PodlaskiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -257,13 +273,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              // Navigator.of(context).push(
-              // MaterialPageRoute(
-              // builder: (_) => const RootPage(),
-              // ),
-              //  );
-              //  },
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const PomorskiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -279,13 +295,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              // Navigator.of(context).push(
-              //  MaterialPageRoute(
-              //   builder: (_) => const RootPage(),
-              //  ),
-              // );
-              //  },
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const SlaskiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -301,13 +317,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              // Navigator.of(context).push(
-              //  MaterialPageRoute(
-              //    builder: (_) => const RootPage(),
-              //  ),
-              //  );
-              //  },
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const SwietokrzyskiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -323,13 +339,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              // Navigator.of(context).push(
-              //MaterialPageRoute(
-              // builder: (_) => const RootPage(),
-              // ),
-              //);
-              //  },
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const WarminskoMazurskiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -345,13 +361,13 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              //Navigator.of(context).push(
-              //MaterialPageRoute(
-              //  builder: (_) => const RootPage(),
-              // ),
-              // );
-              // },
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const WielkopolskiePage(),
+                  ),
+                );
+              },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -367,13 +383,14 @@ class ProvincesPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              onPressed: () {},
-              //Navigator.of(context).push(
-              // MaterialPageRoute(
-              //   builder: (_) => const RootPage(),
-              //   ),
-              //  );
-              //  },
+          onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const ZachodniopomorskiePage(),
+                  ),
+                );
+              },
+            ),
             ),
           ],
         ),
