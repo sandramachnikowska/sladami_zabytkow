@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 final controller = TextEditingController();
 
@@ -33,15 +34,31 @@ class AfricaPage extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
       body: ListView(
-        children: [
-          Container(
-            color: Colors.amber,
-            padding: const EdgeInsets.all(20),
-            margin: const EdgeInsets.all(10),
-            child: const Text('Jakiś tekst'),
-          ),
+        children: const [
+          CountryWidget('Kraj 1'),
+          CountryWidget('Kraj 2'),
+          CountryWidget('Kraj 3'),
         ],
       ),
+    );
+  }
+}
+
+class CountryWidget extends StatelessWidget {
+  const CountryWidget(
+    this.title, {
+    super.key,
+  });
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.amber,
+      padding: const EdgeInsets.all(20),
+      margin: const EdgeInsets.all(10),
+      child: Text(title),
     );
   }
 }
