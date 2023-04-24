@@ -1,8 +1,19 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:sladami_zabytkow/main.dart';
+
+import '../../firebase_options.dart';
 
 final controller = TextEditingController();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const MyApp());
+}
 
 @override
 Widget build(BuildContext context) {
@@ -33,13 +44,28 @@ class AfricaPage extends StatelessWidget {
         onPressed: () {},
         child: const Icon(Icons.add),
       ),
-      body: ListView(
-        children: const [
-          CountryWidget('Kraj 1'),
-          CountryWidget('Kraj 2'),
-          CountryWidget('Kraj 3'),
-        ],
-      ),
+      body: StreamBuilder<QuerySnapshot>(
+          stream:
+              FirebaseFirestore.instance.collection('countries').snapshots(),
+          builder: (context, snapshot) {
+            if (snapshot.hasError) {
+              return const Text('Wystąpił niroczekiwany prblem');
+            }
+
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Text('Proszę czekać, trwa ładowanie danych');
+            }
+
+            final documents = snapshot.data!.docs;
+
+            return ListView(
+              children: [
+                CountryWidget(documents[0]['title']),
+                CountryWidget('Kraj 2'),
+                CountryWidget('Kraj 3'),
+              ],
+            );
+          }),
     );
   }
 }
