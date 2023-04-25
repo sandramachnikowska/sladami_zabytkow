@@ -6,7 +6,6 @@ import 'package:sladami_zabytkow/main.dart';
 
 import '../../firebase_options.dart';
 
-final controller = TextEditingController();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -17,13 +16,15 @@ void main() async {
 
 @override
 Widget build(BuildContext context) {
-  return const AfricaPage();
+  return AfricaPage();
 }
 
 class AfricaPage extends StatelessWidget {
-  const AfricaPage({
+  AfricaPage({
     super.key,
   });
+
+  final controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,14 @@ class AfricaPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          FirebaseFirestore.instance.collection('countries').add(
+            {
+              'title': controller.text,
+            },
+          );
+          controller.clear();
+        },
         child: const Icon(Icons.add),
       ),
       body: StreamBuilder<QuerySnapshot>(
@@ -60,9 +68,23 @@ class AfricaPage extends StatelessWidget {
 
             return ListView(
               children: [
-                CountryWidget(documents[0]['title']),
-                CountryWidget('Kraj 2'),
-                CountryWidget('Kraj 3'),
+                for (final document in documents) ...[
+                  Dismissible(
+                    key: ValueKey(document.id),
+                    onDismissed: (_) {
+                      FirebaseFirestore.instance
+                          .collection('countries')
+                          .doc(document.id)
+                          .delete();
+                    },
+                    child: CountryWidget(
+                      document['title'],
+                    ),
+                  ),
+                ],
+                TextField(
+                  controller: controller,
+                ),
               ],
             );
           }),

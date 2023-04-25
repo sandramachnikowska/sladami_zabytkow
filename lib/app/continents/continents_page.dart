@@ -9,9 +9,9 @@ import 'package:sladami_zabytkow/app/world/northamerica_page.dart';
 import 'package:sladami_zabytkow/app/world/southamerica_page.dart';
 
 class ContinentsPage extends StatelessWidget {
-  ContinentsPage({super.key});
+  const ContinentsPage({super.key});
 
-  final controller = TextEditingController();
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class ContinentsPage extends StatelessWidget {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (_) => const AfricaPage(),
+                  builder: (_) => AfricaPage(),
                 ),
               );
             },
