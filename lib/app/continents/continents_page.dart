@@ -11,8 +11,6 @@ import 'package:sladami_zabytkow/app/world/southamerica_page.dart';
 class ContinentsPage extends StatelessWidget {
   const ContinentsPage({super.key});
 
- 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -158,7 +156,7 @@ class ContinentsPage extends StatelessWidget {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (_) => const AsiaPage(),
+                  builder: (_) => AsiaPage(),
                 ),
               );
             },
