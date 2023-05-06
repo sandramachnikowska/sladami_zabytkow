@@ -1,5 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:sladami_zabytkow/main.dart';
+
+import '../../firebase_options.dart';
 
 final controller = TextEditingController();
 
@@ -24,9 +29,72 @@ class AustraliaPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          FirebaseFirestore.instance.collection('australiacountries').add(
+            {
+              'title': controller.text,
+            },
+          );
+          controller.clear();
+        },
         child: const Icon(Icons.add),
       ),
+      body: StreamBuilder<QuerySnapshot>(
+          stream: FirebaseFirestore.instance
+              .collection('australiacountries')
+              .snapshots(),
+          builder: (context, snapshot) {
+            if (snapshot.hasError) {
+              return const Text('Wystąpił niroczekiwany prblem');
+            }
+
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Text('Proszę czekać, trwa ładowanie danych');
+            }
+
+            final documents = snapshot.data!.docs;
+
+            return ListView(
+              children: [
+                for (final document in documents) ...[
+                  Dismissible(
+                    key: ValueKey(document.id),
+                    onDismissed: (_) {
+                      FirebaseFirestore.instance
+                          .collection('australiacountries')
+                          .doc(document.id)
+                          .delete();
+                    },
+                    child: CountryWidget(
+                      document['title'],
+                    ),
+                  ),
+                ],
+                TextField(
+                  controller: controller,
+                ),
+              ],
+            );
+          }),
+    );
+  }
+}
+
+class CountryWidget extends StatelessWidget {
+  const CountryWidget(
+    this.title, {
+    super.key,
+  });
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.amber,
+      padding: const EdgeInsets.all(20),
+      margin: const EdgeInsets.all(10),
+      child: Text(title),
     );
   }
 }

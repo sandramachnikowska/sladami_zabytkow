@@ -42,7 +42,7 @@ class AsiaPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          FirebaseFirestore.instance.collection('countries').add(
+          FirebaseFirestore.instance.collection('asiacountries').add(
             {
               'title': controller.text,
             },
@@ -52,8 +52,9 @@ class AsiaPage extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
       body: StreamBuilder<QuerySnapshot>(
-          stream:
-              FirebaseFirestore.instance.collection('countries').snapshots(),
+          stream: FirebaseFirestore.instance
+              .collection('asiacountries')
+              .snapshots(),
           builder: (context, snapshot) {
             if (snapshot.hasError) {
               return const Text('Wystąpił niroczekiwany prblem');
@@ -72,7 +73,7 @@ class AsiaPage extends StatelessWidget {
                     key: ValueKey(document.id),
                     onDismissed: (_) {
                       FirebaseFirestore.instance
-                          .collection('countries')
+                          .collection('asiacountries')
                           .doc(document.id)
                           .delete();
                     },
