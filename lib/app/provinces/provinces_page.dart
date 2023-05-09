@@ -56,7 +56,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const DolnoslaskiePage(),
+                    builder: (_) => DolnoslaskiePage(),
                   ),
                 );
               },
@@ -78,7 +78,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const KujawskoPomorskiePage(),
+                    builder: (_) => KujawskoPomorskiePage(),
                   ),
                 );
               },
@@ -100,7 +100,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const LubelskiePage(),
+                    builder: (_) => LubelskiePage(),
                   ),
                 );
               },
@@ -122,7 +122,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const LubuskiePage(),
+                    builder: (_) => LubuskiePage(),
                   ),
                 );
               },
@@ -144,7 +144,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const LodzkiePage(),
+                    builder: (_) => LodzkiePage(),
                   ),
                 );
               },
@@ -166,7 +166,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const MalopolskiePage(),
+                    builder: (_) => MalopolskiePage(),
                   ),
                 );
               },
@@ -188,7 +188,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const MazowieckiePage(),
+                    builder: (_) => MazowieckiePage(),
                   ),
                 );
               },
@@ -232,7 +232,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const PodkarpackiePage(),
+                    builder: (_) => PodkarpackiePage(),
                   ),
                 );
               },
@@ -254,7 +254,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const PodlaskiePage(),
+                    builder: (_) => PodlaskiePage(),
                   ),
                 );
               },
@@ -276,7 +276,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const PomorskiePage(),
+                    builder: (_) => PomorskiePage(),
                   ),
                 );
               },
@@ -298,7 +298,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const SlaskiePage(),
+                    builder: (_) => SlaskiePage(),
                   ),
                 );
               },
@@ -320,7 +320,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const SwietokrzyskiePage(),
+                    builder: (_) => SwietokrzyskiePage(),
                   ),
                 );
               },
@@ -342,7 +342,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const WarminskoMazurskiePage(),
+                    builder: (_) => WarminskoMazurskiePage(),
                   ),
                 );
               },
@@ -364,7 +364,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const WielkopolskiePage(),
+                    builder: (_) => WielkopolskiePage(),
                   ),
                 );
               },
@@ -386,7 +386,7 @@ class ProvincesPage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => const ZachodniopomorskiePage(),
+                    builder: (_) =>  ZachodniopomorskiePage(),
                   ),
                 );
               },
